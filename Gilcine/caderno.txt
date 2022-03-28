@@ -1,0 +1,97 @@
+>>>>>>ARRUMAR O BOTAO DE INSERIR CAPA PARA PEGAR POSTER E LINK APENAS
+>>>>>>ARRUMAR ERRO COM EXCLUSÃO DO DB
+>>>>>>ARRUMAR nome da classe filmescontrooler()
+>>>>>> tentar mostrar a mensagem de favoritar com a classe de mensagem
+>>>>>> ARRUMAR A ABA DE FAVORITOS
+
+
+class="valign-wrapper" >>>>>> alinha verticalmente tudo dentro do elemento com a classe
+na aula 3 foi utilizado o recurso do php para ter a mesma base html e style para todos os templates
+e com isso facilitar as alterações (estilo plates)
+
+Aula 04: Através do armazenamento dos dados dos filmes em arrays e com o loop for{} junto ao template é foi preenchido e criado os posteres dinamicamente
+dados mocados(fixos)
+Implementação com foreach ao invés de for
+uso de endforeach
+
+Aula 5 criação do DB usando sqlite e criação de tabelas diretamente
+
+aula 06 - uso da classe container junto das classes de controle de tela / mexido no tamanho dos cards
+apenas os cards foram alterados para melhor visualização dos mesmos dependendo da quantia de card por linha e tamanho da tela
+Formulário para ter seus dados recebidos do lado do servidor, necessita que os inputs tenham name="" <<<<<<<<
+
+no caso do autoincrement do sqlite, não se deve informar id deixando q o sqlite faça a inserção OU POR NULL
+uso do método header(location) e inserção de mensagem através da url e script toast do materialize junto da verificação da variável php no template da galeria
+resolução do problema de segurança quanto a possivel manipulação feita pelo usuário
+
+Aula 07: criação das classes e uso do pattenrs repository para armazenamento dos filmes
+criação do conexao.php  para abstração da conexao com DB
+
+$titulo = $bd->escapeString($_GET["titulo"]) ; // forma para evitar sql nos input / SEM NECESSIDADE USANDO O BIND VALUE
+
+SQLITE3_TEXT - uma forma de verificação dos dados passados
+
+Troca para uso do obj PDO devido ser mais genérico e maleavel perante diferentes tipos de DBs
+Para a conexão via PDO existe diferentes forma dependendo do DB sendo utilizado
+
+com o uso do PDO receberemos nossos dados em formato de obj 
+template deixa de usar  $filme["sinopse"];
+passa a usar $filme->sinopse;
+
+?msg=Filme+cadastrado+com+sucesso - forma de inserção de query e variavel na url
+
+criação de sessão e manipulação da mensagem aplicandoa também na galeria
+
+Possivel erro de ficar mostrando a mensagem da sessao sempre que entra no cadastrar e volta pra galeria, resolvido
+
+criação da classe de mensagem que irá usar a $_session[message] estipulada previamente por uma rotina anterior
+
+criação da página de rotas e configuração da mesma
+
+atualização das rotas do template e retirada do action pra tratamento via rotas
+
+>>>>>>>>>>AULA 8
+    estruturação mvc
+
+>>>>>>>>>>AULA 9
+    Permitindo envio da imagem do poster além do link com o enctype="multipart/form-data na tag form
+    após passar as informaçoes para o FilmesController ao invés de utilizarmos os indices do array para pegar os valores
+    convertemos os dados recebidos em um objeto para deixar mais pratico e genérico
+    por deixar os dados mais genericos em FilmesController->save(), não iremos mais esperar que o parâmetro do método salvar seja um 
+    obj do tipo Filme, seria preciso que um método da classe Filme, fizesse a rotina para isso
+    
+    obtenção do arquivos de poster através da global $_FILES
+    var_dump utilizado na global e iremos usar as informações que a global carrega para possiveis tratamentos
+
+>>>>>>>>>>AULA 10
+    Favoritos com função assíncrona através de ajax
+    1° ajuste no DB para aeitar esse dado - alteração do nome do db e criação da alteração e update da tabela
+    criado o upadate e executado o arquivo para atualizar a tabela
+
+    2° configurar a requisição com o JS
+        Button realiza ação - <a> serve para navegar
+        classe btn_fav será utilizada para manipulação do button
+
+    3° implementação do ajax via fetch
+    mudança na estrutura de rotas para melhor identificar o id relacionado ao card favoritado
+
+    4° criação da função do controller e do model
+        icone de favorito atualizado conforma informação trazida pelo DB
+        -Para deixar dinamico via js, foi usado a url com o parâmetro no fetch 
+        utilizada a tag data-id="" para obter o id do card clicado
+        id aplicado na rota do fetch para execução do controller da rota, sem retorno, apenas trocando o valor de favorito no db
+        >>>>deixando dinâmico para troca do favorito de acordo com o icone clicado:
+            alteração na método favoritar()
+            -Existe a query em que devemos primeiro fazer um select buscando o valor de favorito do id clicado e entao atualizar o valor
+            de favorito de acordo - 2 querys diferentes
+            -Usaremos uma query apenas: a mesma query com a inserção do NOT
+            -verificação do método com retorno de true ou false no JS no fetch a partir do then() e inserção de mensagem de erro
+
+    MVC, As funções princcipais da função, são feitas nos controllers
+    melhor visualização do pra q serve o diretorio models, como influencia de vdd nos controllers 
+    e melhor entendimento de outros diretórios
+
+
+    >>>>Aula 11 Deploy Heroku 
+
+    

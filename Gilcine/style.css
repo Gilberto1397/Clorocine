@@ -1,0 +1,17 @@
+body{
+    background-color: #e5e5e5;
+}
+
+.nav-extended{
+    background-image:url("img/cinema-strip-movie-film-video.jpg");
+    background-blend-mode: soft-light;
+}
+
+.active{
+    border-bottom: solid 2px #fff;
+    background-color: transparent;
+}
+
+.nav-header h1{
+    text-shadow: 2px 2px 8px black;
+}
