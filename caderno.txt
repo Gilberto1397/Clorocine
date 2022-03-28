@@ -93,5 +93,4 @@ atualização das rotas do template e retirada do action pra tratamento via rota
 
 
     >>>>Aula 11 Deploy Heroku 
-
-    
+        Alteração de informações para o ambiente de produção
