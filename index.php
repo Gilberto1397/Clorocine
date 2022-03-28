@@ -1,5 +1,5 @@
 <?php
-require "controllers\FilmesController.php";
+require "controllers/FilmesController.php";
 
 $rota = $_SERVER["REQUEST_URI"]; // IDENTIFICA A URL CHAMADA
 $metodo = $_SERVER["REQUEST_METHOD"]; // IDENTIFICA A URL CHAMADA
