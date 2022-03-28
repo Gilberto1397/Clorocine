@@ -94,3 +94,8 @@ atualização das rotas do template e retirada do action pra tratamento via rota
 
     >>>>Aula 11 Deploy Heroku 
         Alteração de informações para o ambiente de produção
+        iremos alterar a conexão de sqlite para mysql
+
+        Criação do arquivo .env para manipulação de dados do ambiente   
+            iremos controlar as variáveis de conexão nele
+            inserção das variáveis do arquivo .env na Conexão
