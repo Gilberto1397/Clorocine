@@ -15,7 +15,9 @@ class Conexao
         $user = $env["user"];
 
         if ($databaseType === "mysql") {    // controle para trocar para mysql no ambiente de produção
-            $database = "host=$server;dbname=$database";
+            //$database = "host=$server;dbname=$database";
+            return new PDO("mysql:ax6w9b9qhhozzi5e;qao3ibsa7hhgecbv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/bsgh7kx1ud3yzc7e,s7aenngdyqzbouh3");
+            exit();
         }
 
         return new PDO("$databaseType:$database");

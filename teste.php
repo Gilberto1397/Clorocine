@@ -15,7 +15,7 @@ $filmes = (new Conexao())->criar()->exec($sql);
 var_dump($filmes);
  */
 
-$filmesLista = [];
+/* $filmesLista = [];
 
         $sql = "SELECT * FROM filmes";
         $filmes = Conexao::criar()->query($sql); //query sendo usado por questão de busca apenas - $rs = abreviação de "result set"
@@ -23,4 +23,13 @@ $filmesLista = [];
         {
             array_push($filmesLista, $filme);
         }
-        echo json_encode($filmesLista);
+        echo json_encode($filmesLista); */
+
+        
+
+        $dbh = new PDO('mysql:host=qao3ibsa7hhgecbv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=bsgh7kx1ud3yzc7e', "ax6w9b9qhhozzi5e", "s7aenngdyqzbouh3");
+
+
+
+        echo var_dump($dbh);
+
