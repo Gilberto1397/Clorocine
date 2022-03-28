@@ -99,3 +99,9 @@ atualização das rotas do template e retirada do action pra tratamento via rota
         Criação do arquivo .env para manipulação de dados do ambiente   
             iremos controlar as variáveis de conexão nele
             inserção das variáveis do arquivo .env na Conexão
+            contratação da hospedagem do DB
+
+        Configuração das rotas através do .htaccess direcionando acessos na url para o index.php 
+        e criação da tabela no DB
+
+        inserção do arquivo .gitignore para não enviar arquivos selecionados
