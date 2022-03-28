@@ -10,7 +10,7 @@ class Conexao
         
         $databaseType = $env["databasetype"];
         $database = $env["database"];
-        $server = $env["server"];
+        $host = $env["host"];
         $pass = $env["pass"];
         $user = $env["user"];
 
