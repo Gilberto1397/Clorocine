@@ -1,5 +1,5 @@
 <?php require_once "cabecalho.php" ?>
-<?php require_once "util\mensagem.php" ?>
+<?php require_once "util/mensagem.php" ?>
 
 <?php
 

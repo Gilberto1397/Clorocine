@@ -1,5 +1,5 @@
 <?php
-require_once "repository\Conexao.php";
+require_once "repository/Conexao.php";
 
 /* $sql = "INSERT INTO filmes (id, titulo) VALUES (
     null, :titulo)";

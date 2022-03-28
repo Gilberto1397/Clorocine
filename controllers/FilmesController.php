@@ -1,6 +1,6 @@
 <?php
-require_once "repository\FilmesRepositoryPDO.php";
-require_once "model\Filme.php";
+require_once "repository/FilmesRepositoryPDO.php";
+require_once "model/Filme.php";
 //session_start();
 
 

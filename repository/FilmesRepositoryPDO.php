@@ -1,5 +1,5 @@
 <?php
-require_once "repository\Conexao.php";
+require_once "repository/Conexao.php";
 //require_once "db\bd_up.php";
 //classe de manipulação do DB
 
