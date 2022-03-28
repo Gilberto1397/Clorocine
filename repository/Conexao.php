@@ -1,5 +1,7 @@
 <?php
 
+//>>>>>>>>>>>>CUIDAR O ARQUIVO .ENV
+
 //Conexão com DB - facilidade para configuração do DB
 
 class Conexao
