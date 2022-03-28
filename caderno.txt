@@ -105,3 +105,6 @@ atualização das rotas do template e retirada do action pra tratamento via rota
         e criação da tabela no DB
 
         inserção do arquivo .gitignore para não enviar arquivos selecionados
+
+        refatoração para quando puxar todos os resultados do DB e não haer nenhum
+            em repository\FilmesRepositoryPDO.php e na galeria
