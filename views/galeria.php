@@ -88,7 +88,7 @@ $filmes = $controller->index();
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <?= mensagem::mostrar(); ?>
+    <!-- <?= mensagem::mostrar(); ?> -->
 
     <script>
         document.querySelectorAll(".btn-fav").forEach(btn => {
