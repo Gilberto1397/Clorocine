@@ -16,7 +16,7 @@ class Conexao
 
         if ($databaseType === "mysql") {    // controle para trocar para mysql no ambiente de produção
             //$database = "host=$server;dbname=$database";
-            return new PDO("mysql:host=ax6w9b9qhhozzi5e;dbname=qao3ibsa7hhgecbv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "bsgh7kx1ud3yzc7e", "s7aenngdyqzbouh3");
+            return new PDO("mysql:host=qao3ibsa7hhgecbv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=bsgh7kx1ud3yzc7e", "ax6w9b9qhhozzi5e", "s7aenngdyqzbouh3");
             exit();
         }
 
