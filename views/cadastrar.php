@@ -9,7 +9,7 @@
       </ul>
     </div>
     <div class="nav-header center">
-      <h1>CLOROCINE</h1>
+      <h2>Gilcine</h2>
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent purple darken-1">
@@ -19,8 +19,9 @@
     </div>
   </nav>
 
+  <div class="container">
   <div class="row">
-    <div class="col s6 offset-s3">
+    <div class="col s12">
       <div class="card ">
         <div class="card-content">
           <span class="card-title">Cadastrar Filme</span>
@@ -77,6 +78,7 @@
       </div>
     </div>
     </form>
+  </div>
   </div>
 
   <!-- Compiled and minified JavaScript -->

@@ -1,8 +1,8 @@
 >>>>>>ARRUMAR O BOTAO DE INSERIR CAPA PARA PEGAR POSTER E LINK APENAS
->>>>>>ARRUMAR ERRO COM EXCLUSÃO DO DB
 >>>>>>ARRUMAR nome da classe filmescontrooler()
 >>>>>> tentar mostrar a mensagem de favoritar com a classe de mensagem
 >>>>>> ARRUMAR A ABA DE FAVORITOS
+>>>>>> ARRUMAR RESPONSIVIDADE DO CADASTRO
 
 
 class="valign-wrapper" >>>>>> alinha verticalmente tudo dentro do elemento com a classe
