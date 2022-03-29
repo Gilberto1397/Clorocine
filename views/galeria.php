@@ -78,7 +78,7 @@ $filmes = $controller->index();
                             <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme->nota; ?></p>
                             <span class="card-title"><?= $filme->titulo; ?></span>
                             <!-- <p><?= substr($filme->sinopse, 0, 125) . "..." ?></p> -->
-                            <p><?= str_limit_chars($filme->sinopse, 120) ?></p>
+                            <p><?= substr($filme->sinopse, 0, 150) . "..." ?></p>
                             <!-- BOTAO DE APAGAR -->
                             <button data-id="<?= $filme->id; ?>" class="waves-effect waves-light btn-small right red accent-2 btn-delete"><i class="material-icons">delete</i></button> 
                         </div>

@@ -17,5 +17,3 @@
 
     <title>Clorocine</title>
 </head>
-
-<?php require "Helpers.php" ?>
