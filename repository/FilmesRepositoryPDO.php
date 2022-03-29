@@ -37,7 +37,7 @@ class FilmesRepositoryPDO
         
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(":titulo", $filme->titulo, PDO::PARAM_STR); // uso do obj em cada bind equivalente
-        $stmt->bindValue(":poster", $filme->poster_link, PDO::PARAM_STR);
+        $stmt->bindValue(":poster", $filme->poster, PDO::PARAM_STR);
         $stmt->bindValue(":sinopse",$filme->sinopse, PDO::PARAM_STR);
         $stmt->bindValue(":nota", $filme->nota, PDO::PARAM_STR);
         return $stmt->execute();
