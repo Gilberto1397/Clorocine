@@ -18,17 +18,18 @@ class FilmesControoler {
         $filmesRepository = new FilmesRepositoryPDO();
         $filme = (object) $request; // uso de objeto para deixar mais prática e relacional ao POO - transforma o $REQUEST num obj
         
-        $upload = $this->savePoster($_FILES);
-
-        if (gettype($upload) == "string") {
-            $filme->poster = $upload;
+        if ($_FILES) {
+            $upload = $this->savePoster($_FILES);
+            
+            if (gettype($upload) == "string") {
+                $filme->poster = $upload;
+            }
         }
         /* $filmes = new Filme();
         $filmes->titulo = $request["titulo"] ; 
         $filmes->poster = $request["poster"] ;
         $filmes->sinopse = $request["sinopse"] ;
         $filmes->nota = $request["nota"] ; */ 
-        
         
         if ($filmesRepository->salvar($filme)) 
         $_SESSION["msg"] = "Filme cadastrado com sucesso";
@@ -55,6 +56,14 @@ class FilmesControoler {
     public function favorite(int $id){
         $filmesRepository = new FilmesRepositoryPDO();
         $result = ['success' => $filmesRepository->favoritar($id)]; // o método favoritar irá retornar true ou false
+        //$result = ["success" => "ok"]; // o método favoritar irá retornar true ou false
+        header('Content-type: application/json');
+        echo json_encode($result);
+    }
+
+    public function delete(int $id){
+        $filmesRepository = new FilmesRepositoryPDO();
+        $result = ['success' => $filmesRepository->delete($id)]; // o método favoritar irá retornar true ou false
         //$result = ["success" => "ok"]; // o método favoritar irá retornar true ou false
         header('Content-type: application/json');
         echo json_encode($result);

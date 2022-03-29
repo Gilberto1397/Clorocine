@@ -108,3 +108,11 @@ atualização das rotas do template e retirada do action pra tratamento via rota
 
         refatoração para quando puxar todos os resultados do DB e não haer nenhum
             em repository\FilmesRepositoryPDO.php e na galeria
+
+      >>>>Aula 12 Apagar filmes
+
+            Botao de apagar no galeria e novo ajax para delete 
+                uso de padrão rest nas tanto na galeria como nas rotas
+                criação do método no controler e na model
+                fazer o filme ser apagado sem precisar recarregar a página
+                criação de estilo para exclusão suavisada e aplicação de setTimeOut() no comando

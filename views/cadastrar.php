@@ -6,7 +6,6 @@
       <ul id="nav-mobile" class="right">
         <li><a href="/">Galeria</a></li>
         <li class="active"><a href="/novo">Cadastrar</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
       </ul>
     </div>
     <div class="nav-header center">
@@ -15,7 +14,6 @@
     <div class="nav-content">
       <ul class="tabs tabs-transparent purple darken-1">
         <li class="tab"><a class="active" href="#test1">Todos</a></li>
-        <li class="tab"><a href="#test2">Assistidos</a></li>
         <li class="tab"><a href="#test3">Favoritos</a></li>
       </ul>
     </div>
@@ -66,6 +64,10 @@
               <input name="poster" class="file-path validate" type="text">
             </div>
           </div>
+            <div class="input-field">
+                <input id="poster" name="poster_link" type="text" class="validate">
+                <label for="poster">Link online do poster</label>
+            </div>
 
         </div>
         <div class="card-action">

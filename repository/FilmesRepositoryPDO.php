@@ -37,7 +37,7 @@ class FilmesRepositoryPDO
         
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(":titulo", $filme->titulo, PDO::PARAM_STR); // uso do obj em cada bind equivalente
-        $stmt->bindValue(":poster", $filme->poster, PDO::PARAM_STR);
+        $stmt->bindValue(":poster", $filme->poster_link, PDO::PARAM_STR);
         $stmt->bindValue(":sinopse",$filme->sinopse, PDO::PARAM_STR);
         $stmt->bindValue(":nota", $filme->nota, PDO::PARAM_STR);
         return $stmt->execute();
@@ -48,6 +48,19 @@ class FilmesRepositoryPDO
     public function favoritar(int $id)
     {
         $sql = "UPDATE filmes SET favorito = NOT favorito WHERE id = :id"; // Atualize o favorito com o valor contrário no id especificado
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(":id", $id, PDO::PARAM_INT); // uso do obj em cada bind equivalente
+                
+        if ($stmt->execute()) {
+            return "ok";
+        }  else {
+            return "erro";
+        }
+    }
+
+    public function delete(int $id)
+    {
+        $sql = "DELETE FROM filmes WHERE id = :id"; // Atualize o favorito com o valor contrário no id especificado
         $stmt = $this->conexao->prepare($sql);
         $stmt->bindValue(":id", $id, PDO::PARAM_INT); // uso do obj em cada bind equivalente
                 

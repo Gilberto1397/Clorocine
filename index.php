@@ -24,6 +24,15 @@ if (substr($rota, 0, strlen("/favoritar")) === "/favoritar") {
     exit();
 }
 
+if (substr($rota, 0, strlen("/filmes")) === "/filmes") {
+    if ($metodo == "GET") require "views/cadastrar.php";
+    if ($metodo == "DELETE") {
+        $controller = new FilmesControoler();
+        $controller->delete(basename($rota)); // $_REQUEST - armazena os dados enviados do form
+    }
+    exit();
+}
+
 require "views/404.php";
 
 

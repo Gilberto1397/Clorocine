@@ -56,7 +56,6 @@ $filmes = $controller->index();
         <div class="nav-content">
             <ul class="tabs tabs-transparent purple darken-1">
                 <li class="tab"><a class="active" href="#test1">Todos</a></li>
-                <li class="tab"><a href="#test2">Assistidos</a></li>
                 <li class="tab"><a href="#test3">Favoritos</a></li>
             </ul>
         </div>
@@ -78,7 +77,10 @@ $filmes = $controller->index();
                         <div class="card-content">
                             <p class="valign-wrapper"><i class="material-icons amber-text">star</i><?= $filme->nota; ?></p>
                             <span class="card-title"><?= $filme->titulo; ?></span>
-                            <p><?= $filme->sinopse; ?></p>
+                            <!-- <p><?= substr($filme->sinopse, 0, 125) . "..." ?></p> -->
+                            <p><?= str_limit_chars($filme->sinopse, 120) ?></p>
+                            <!-- BOTAO DE APAGAR -->
+                            <button data-id="<?= $filme->id; ?>" class="waves-effect waves-light btn-small right red accent-2 btn-delete"><i class="material-icons">delete</i></button> 
                         </div>
                     </div>
                 </div>
@@ -89,31 +91,6 @@ $filmes = $controller->index();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- <?= mensagem::mostrar(); ?> -->
-
-    <script>
-        document.querySelectorAll(".btn-fav").forEach(btn => {
-            btn.addEventListener("click", e => {
-                const id = btn.getAttribute("data-id");
-                //vai efetuar o fetch, receber a resposta, transformar em json pois virá como array - se o response na chave success for OK, o código irá seguir
-                fetch(`/favoritar/${id}`)
-                    .then(response => response.json())
-                    .then(response => {
-                        if (response.success === "ok") {
-                            if (btn.querySelector("i").innerHTML === "favorite") {
-                                btn.querySelector("i").innerHTML = "favorite_border";
-                            } else {
-                                btn.querySelector("i").innerHTML = "favorite";
-                            }
-                        }
-                    }).catch(error => {
-                        M.toast({
-                            html: "Erro ao favoritar"
-                        })
-                    })
-
-            });
-        });
-    </script>
 </body>
 
 </html>
