@@ -16,6 +16,5 @@ public $nota;
 
 /** id @var string*/
 public $poster;
-
     
 }
