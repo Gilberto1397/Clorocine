@@ -2,6 +2,7 @@
 >>>>>>ARRUMAR nome da classe filmescontrooler()
 >>>>>> tentar mostrar a mensagem de favoritar com a classe de mensagem
 >>>>>> ARRUMAR A ABA DE FAVORITOS
+>>>>>> CRIAR UMA PÁGINA QUE ABRA TODAS AS INFORMAÇÕES DO FILME CADASTRADO
 >>>>>> ARRUMAR RESPONSIVIDADE DO CADASTRO
 
 
