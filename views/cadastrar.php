@@ -65,10 +65,10 @@
               <input name="poster" class="file-path validate" type="text">
             </div>
           </div>
-            <div class="input-field">
+           <!--  <div class="input-field">
                 <input id="poster" name="poster_link" type="text" class="validate">
                 <label for="poster">Link online do poster</label>
-            </div>
+            </div> -->
 
         </div>
         <div class="card-action">
